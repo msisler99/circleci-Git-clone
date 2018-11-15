@@ -9,7 +9,8 @@ jobs:
          command: |
            echo 'Hello World!'
            echo 'This is the delivery pipeline'
-           sudo apt-get install -y git
+           mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+
            git clone https://github.com/msisler99/circleci-terraform.git
            ls -la
  
