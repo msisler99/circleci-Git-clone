@@ -15,6 +15,7 @@ jobs:
            git clone https://github.com/msisler99/circleci-terraform.git
            cd circleci-terraform
            ls -la
+           cat main.tf
  
 workflows:
  version: 2
