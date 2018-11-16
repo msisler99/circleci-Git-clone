@@ -16,6 +16,7 @@ jobs:
            cat main.tf
            terraform init
            terraform plan
+           terraform apply -auto-approve
  
 workflows:
  version: 2
