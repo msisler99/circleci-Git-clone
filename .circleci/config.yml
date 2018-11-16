@@ -9,8 +9,9 @@ jobs:
          command: |
            echo 'Hello World!'
            echo 'This is the delivery pipeline'
+          
            git clone https://github.com/msisler99/circleci-services.git
-           
+           pwd
            ls -la
            cat main.tf
  
