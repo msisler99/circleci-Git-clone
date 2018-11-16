@@ -15,6 +15,7 @@ jobs:
            ls -la
            cat main.tf
            terraform init
+           terraform plan
  
 workflows:
  version: 2
