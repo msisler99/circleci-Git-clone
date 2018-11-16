@@ -14,6 +14,7 @@ jobs:
            cd circleci-services
            ls -la
            cat main.tf
+           terraform init
  
 workflows:
  version: 2
