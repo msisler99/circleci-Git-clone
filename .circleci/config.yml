@@ -20,11 +20,15 @@ jobs:
            cat backend.tf
            
            terraform init
+           
            terraform workspace new PR_Test
            
            terraform plan
+           
            #terraform apply -auto-approve
+           
            #terraform show
+           
            #terraform destroy -auto-approve. 
  
 workflows:
