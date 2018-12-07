@@ -11,7 +11,7 @@ jobs:
            cd circleci-services
            ls -la
            echo "${CI_PULL_REQUEST}" > temp1.txt
-           ENV
+           env
            sed 's/^.\{19\}//' temp1.txt > temp2.txt
             
            #sed -e "s/GENERIC/$(sed 's:/:\\/:g' PR_Test)/" backend.tf.save > backend.tf
