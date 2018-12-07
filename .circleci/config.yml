@@ -7,18 +7,19 @@ jobs:
      - run:
          name: Hello World
          command: |
-           echo 'Hello World!'
-           echo 'This is the delivery pipeline'
-          
+           echo "${CI_PULL_REQUEST}" > temp1.txt
+            
+           sed 's/^.\{19\}//' temp1.txt > temp2.txt
+           cat temp2.txt   
            git clone https://github.com/msisler99/circleci-services.git
            cd circleci-services
            ls -la
-           cat main.tf
+           terraform weorkspace new PRTest
            terraform init
            #terraform plan
            #terraform apply -auto-approve
-           terraform show
-           terraform destroy -auto-approve
+           #terraform show
+           #terraform destroy -auto-approve
  
 workflows:
  version: 2
