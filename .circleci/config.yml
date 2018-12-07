@@ -23,7 +23,7 @@ jobs:
            
            #terraform workspace delete PR_Test
            
-           terraform workspace new PR_Test
+           terraform workspace select PR_Test
            
            terraform plan
            
