@@ -20,7 +20,9 @@ jobs:
            cat backend.tf
            
            terraform init
-           terraform workspace delete PR_Test
+           
+           #terraform workspace delete PR_Test
+           
            terraform workspace new PR_Test
            
            terraform plan
