@@ -25,7 +25,7 @@ jobs:
            
            terraform workspace select PR_Test
            
-           terraform plan
+           #terraform plan
            
            #terraform apply -auto-approve
            
