@@ -14,7 +14,7 @@ jobs:
            git clone https://github.com/msisler99/circleci-services.git
            cd circleci-services
            ls -la
-           terraform weorkspace new PRTest
+           terraform workspace new PRTest
            terraform init
            terraform plan
            #terraform apply -auto-approve
