@@ -15,7 +15,8 @@ jobs:
            sed 's/^.\{19\}//' temp1.txt > temp2.txt
             
            sed -e "s/GENERIC/$(sed 's:/:\\/:g' "PR_Test")/" backend.tf.save > backend.tf
-                      
+           cat backend.tf
+           
            #terraform workspace new PR_Test
            #terraform init
            #terraform plan
