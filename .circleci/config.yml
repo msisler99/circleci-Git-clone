@@ -19,10 +19,10 @@ jobs:
            
            cat backend.tf
            
-           
+           terraform init
            
            terraform workspace new PR_Test
-           terraform init
+           
            
            terraform plan
            
