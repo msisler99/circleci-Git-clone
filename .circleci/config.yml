@@ -27,11 +27,11 @@ jobs:
            
            terraform plan
            
-           terraform apply -auto-approve
+           #terraform apply -auto-approve
            
-           terraform show
+           #terraform show
            
-           terraform destroy --auto-approve   
+           #terraform destroy --auto-approve   
  
 workflows:
  version: 2
