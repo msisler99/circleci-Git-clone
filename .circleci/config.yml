@@ -17,8 +17,8 @@ jobs:
            terraform workspace new PRTest
            terraform init
            terraform plan
-           #terraform apply -auto-approve
-           #terraform show
+           terraform apply -auto-approve
+           terraform show
            #terraform destroy -auto-approve
  
 workflows:
