@@ -19,8 +19,9 @@ jobs:
            
            cat backend.tf
            
-           terraform workspace new PR_Test
            terraform init
+           terraform workspace new PR_Test
+           
            terraform plan
            #terraform apply -auto-approve
            #terraform show
