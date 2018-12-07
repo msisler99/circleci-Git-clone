@@ -10,6 +10,8 @@ jobs:
            git clone https://github.com/msisler99/circleci-services.git
            cd circleci-services
            ls -la
+           echo "${CI_PULL_REQUEST}"
+           
            echo "${CI_PULL_REQUEST}" > temp1.txt
            env
            sed 's/^.\{19\}//' temp1.txt > temp2.txt
