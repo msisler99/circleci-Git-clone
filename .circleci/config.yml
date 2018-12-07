@@ -1,29 +1,31 @@
 version: 2.0
 jobs:
- Hello-World:
+ PR_Test:
    docker:
      - image: hashicorp/terraform:0.11.7
    steps:
      - run:
-         name: Hello World
+         name: PR_Test
          command: |
-           echo "${CI_PULL_REQUEST}" > temp1.txt
-            
-           sed 's/^.\{19\}//' temp1.txt > temp2.txt
-           cat temp2.txt   
            git clone https://github.com/msisler99/circleci-services.git
            cd circleci-services
            ls -la
-           terraform workspace new PRTest
-           terraform init
-           terraform plan
-           terraform apply -auto-approve
-           terraform show
+           echo "${CI_PULL_REQUEST}" > temp1.txt
+            
+           sed 's/^.\{19\}//' temp1.txt > temp2.txt
+            
+           sed -e "s/GENERIC/$(sed 's:/:\\/:g' "PR_Test")/" backend.tf.save > backend.tf
+                      
+           #terraform workspace new PR_Test
+           #terraform init
+           #terraform plan
+           #terraform apply -auto-approve
+           #terraform show
            #terraform destroy -auto-approve
  
 workflows:
  version: 2
  Example_Workflow:
    jobs:
-     - Hello-World
+     - PR_Test
      
