@@ -21,9 +21,9 @@ jobs:
            
            terraform init
            terraform workspace delete PR_Test
-           #terraform workspace new PR_Test
+           terraform workspace new PR_Test
            
-           #terraform plan
+           terraform plan
            
            #terraform apply -auto-approve
            
