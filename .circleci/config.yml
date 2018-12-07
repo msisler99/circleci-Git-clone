@@ -15,7 +15,7 @@ jobs:
            sed 's/^.\{19\}//' temp1.txt > temp2.txt
             
            #sed -e "s/GENERIC/$(sed 's:/:\\/:g' PR_Test)/" backend.tf.save > backend.tf
-           sed 's/GENERIC/PR_Tes/g' backend.tf.save > backend.tf
+           sed 's/GENERIC/PR_Test/g' backend.tf.save > backend.tf
            
            cat backend.tf
            
