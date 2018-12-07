@@ -31,7 +31,7 @@ jobs:
            
            #terraform show
            
-           #terraform destroy --auto-approve   
+           #terraform destroy --auto-approve     
  
 workflows:
  version: 2
