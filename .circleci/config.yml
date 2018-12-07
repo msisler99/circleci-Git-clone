@@ -16,7 +16,7 @@ jobs:
            ls -la
            terraform weorkspace new PRTest
            terraform init
-           #terraform plan
+           terraform plan
            #terraform apply -auto-approve
            #terraform show
            #terraform destroy -auto-approve
