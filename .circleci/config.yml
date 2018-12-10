@@ -35,8 +35,8 @@ jobs:
            
            #terraform destroy --auto-approve
            
-           terraform workspace select default
-           terraform workspace delete PR_Test
+           #terraform workspace select default
+           #terraform workspace delete PR_Test
  
 workflows:
  version: 2
