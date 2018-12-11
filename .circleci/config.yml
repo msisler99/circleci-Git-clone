@@ -12,6 +12,7 @@ jobs:
            ls -la
            echo "Pull Request " "${CI_PULL_REQUEST}"
            echo "${CI_PULL_REQUEST}"
+           
                       
            echo "${CI_PULL_REQUEST}" > temp1.txt
            env
