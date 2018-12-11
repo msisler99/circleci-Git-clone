@@ -1,0 +1,11 @@
+version: '1.0'
+steps:
+  BuildingDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: jeffmaher/codefresheventspoc
+  SeeEnv:
+    title: See env vars
+    image: ${{BuildingDockerImage}}
+    commands:
+      - env
