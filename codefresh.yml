@@ -9,6 +9,4 @@ steps:
     image: ${{BuildingDockerImage}}
     commands:
       - env
-      - git clone https://github.com/msisler99/circleci-services.git
-      - cd circleci-services
       - ls -la    
