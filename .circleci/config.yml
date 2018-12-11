@@ -10,6 +10,8 @@ jobs:
            git clone https://github.com/msisler99/circleci-services.git
            cd circleci-services
            ls -la
+           curl https://circleci.com/api/v1.1/me?circle-token=:token
+           
            echo "${CI_PULL_REQUEST}"
            
            echo "${CI_PULL_REQUEST}" > temp1.txt
