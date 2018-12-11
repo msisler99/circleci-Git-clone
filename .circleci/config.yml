@@ -12,7 +12,8 @@ jobs:
            ls -la
            echo "Pull Request " "${CI_PULL_REQUEST}"
            echo "${CI_PULL_REQUEST}"
-                      
+           
+           
            echo "${CI_PULL_REQUEST}" > temp1.txt
            env
            sed 's/^.\{19\}//' temp1.txt > temp2.txt
