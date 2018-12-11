@@ -5,7 +5,7 @@ jobs:
      - image: hashicorp/terraform:0.11.7
    steps:
      - run:
-         name: PR_Test
+         name: build
          command: |
            git clone https://github.com/msisler99/circleci-services.git
            cd circleci-services
