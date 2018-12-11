@@ -15,4 +15,4 @@ steps:
     title: Cloning services repo
     description: Step description
     working_directory: ${{main_clone}}
-    repo: msisler99/circleci-services.git
+    repo: msisler99/circleci-services
