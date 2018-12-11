@@ -16,8 +16,4 @@ steps:
     description: Step description
     working_directory: ${{main_clone}}
     repo: msisler99/circleci-services
-  CdtoServices:
-    commands:
-    - cd services
-    - ls -la
   
