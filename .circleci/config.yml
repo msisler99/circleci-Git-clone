@@ -1,11 +1,11 @@
 version: 2.0
 jobs:
- PR_Test:
+ Build:
    docker:
      - image: hashicorp/terraform:0.11.7
    steps:
      - run:
-         name: PR_Test
+         name: Build
          command: |
            git clone https://github.com/msisler99/circleci-services.git
            cd circleci-services
@@ -41,5 +41,5 @@ workflows:
  version: 2
  Example_Workflow:
    jobs:
-     - PR_Test
+     - Build
      
