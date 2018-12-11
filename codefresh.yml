@@ -15,6 +15,6 @@ steps:
     title: Cloning services repo
     description: Step description
     working_directory: ${{main_clone}}
+    git: CF-default
     repo: msisler99/circleci-services
-  NextStep:
   
