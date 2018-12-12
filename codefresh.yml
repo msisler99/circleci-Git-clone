@@ -23,5 +23,7 @@ steps:
     commands:
       - env
       - ls -la  
+      - cd circleci-services
+      - ls -la
 
   
