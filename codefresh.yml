@@ -30,4 +30,5 @@ steps:
       - aws configure set default.region us-west-2
       - terraform init
       - terraform plan
+      # - ls -la
       
