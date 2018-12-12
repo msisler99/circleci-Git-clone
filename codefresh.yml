@@ -17,5 +17,11 @@ steps:
     working_directory: ${{main_clone}}
     git: CF-default
     repo: msisler99/circleci-services
+  SeeEnv2:
+    title: See env vars
+    image: ${{BuildingDockerImage}}
+    commands:
+      - env
+      - ls -la  
 
   
