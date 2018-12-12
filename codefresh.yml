@@ -17,13 +17,15 @@ steps:
     working_directory: ${{main_clone}}
     git: CF-default
     repo: msisler99/circleci-services
-  SeeEnv2:
-    title: See env vars
+  Terraform:
+    title: Terraform
     image: ${{BuildingDockerImage}}
     commands:
       - env
       - ls -la  
       - cd circleci-services
       - ls -la
-      - echo $AWS_Access_Key
-      - echo $AWS_Secret_Key
+      aws configure aws configure set aws_access_key_id $AWS_Access_Key
+      aws configure set aws_secret_access_key $AWS_Secret_Key
+      aws configure set default.region us-west-2
+      
