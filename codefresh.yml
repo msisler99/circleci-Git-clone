@@ -25,5 +25,5 @@ steps:
       - ls -la  
       - cd circleci-services
       - ls -la
-      - terraform init
-      - terraform plan
+      - echo $AWS_Access_Key
+      - echo $AWS_Access_Key
