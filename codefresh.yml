@@ -29,15 +29,15 @@ steps:
       - aws configure set aws_secret_access_key $AWS_Secret_Key
       - aws configure set default.region us-west-2
       - terraform init
-      - terraform workspace select dev
+      - terraform workspace new dev
       - terraform workspace list
-      #- terraform plan
-      #- terraform apply --auto-approve
+      - terraform plan
+      - terraform apply --auto-approve
       - terraform show
-      - terraform destroy --auto-approve
-      - terraform workspace select default
-      - terraform workspace delete dev
-      - terraform workspace list
-      - terraform show
+      #- terraform destroy --auto-approve
+      #- terraform workspace select default
+      #- terraform workspace delete dev
+      #- terraform workspace list
+      #- terraform show
       
       
