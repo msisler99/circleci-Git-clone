@@ -18,5 +18,4 @@ steps:
     git: CF-default
     repo: msisler99/circleci-services
     on_success:
-     - ls -la
   
