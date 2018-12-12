@@ -17,4 +17,8 @@ steps:
     working_directory: ${{main_clone}}
     git: CF-default
     repo: msisler99/circleci-services
+  SeeEnv2:
+    commands:
+      - env
+      - ls -la  
   
