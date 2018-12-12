@@ -26,4 +26,4 @@ steps:
       - cd circleci-services
       - ls -la
       - echo $AWS_Access_Key
-      - echo $AWS_Access_Key
+      - echo $AWS_Secret_Key
