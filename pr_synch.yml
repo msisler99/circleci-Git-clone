@@ -33,8 +33,7 @@ steps:
       - terraform workspace list
       - terraform plan
       
-      #- terraform apply --auto-approve
-      
+      #- terraform apply --auto-approve      
       #- terraform show
     
       
