@@ -32,7 +32,6 @@ steps:
       - terraform workspace select $CF_BRANCH_TAG_NORMALIZED-$CF_PULL_REQUEST_NUMBER
       - terraform workspace list
       - terraform show
-      
       #- terraform destroy --auto-approve
       - terraform workspace select default
       - terraform workspace delete $CF_BRANCH_TAG_NORMALIZED-$CF_PULL_REQUEST_NUMBER
