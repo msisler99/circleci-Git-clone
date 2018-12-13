@@ -1,0 +1,43 @@
+version: '1.0'
+steps:
+  BuildingDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: jeffmaher/codefresheventspoc
+  SeeEnv:
+    title: See env vars
+    image: ${{BuildingDockerImage}}
+    commands:
+      - env
+      - ls -la  
+  GitClone:
+    type: git-clone
+    title: Cloning services repo
+    description: Step description
+    working_directory: ${{main_clone}}
+    git: CF-default
+    repo: msisler99/circleci-services
+  Terraform:
+    title: Terraform
+    image: ${{BuildingDockerImage}}
+    commands:
+      - env
+      - ls -la  
+      - cd circleci-services
+      - ls -la
+      - aws configure set aws_access_key_id $AWS_Access_Key
+      - aws configure set aws_secret_access_key $AWS_Secret_Key
+      - aws configure set default.region us-west-2
+      - terraform init
+      - terraform workspace select dev
+      #- terraform workspace list
+      #- terraform plan
+      #- terraform apply --auto-approve
+      #- terraform show
+      #- terraform destroy --auto-approve
+      #- terraform workspace select default
+      #- terraform workspace delete dev
+      - terraform workspace list
+      #- terraform show
+      
+      
