@@ -34,7 +34,7 @@ steps:
       - terraform show
       #- terraform destroy --auto-approve
       #- terraform workspace select default
-      #- terraform workspace delete dev
+      - terraform workspace delete dev
       - terraform workspace list
       
       
