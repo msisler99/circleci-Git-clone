@@ -29,7 +29,7 @@ steps:
       - aws configure set aws_secret_access_key $AWS_Secret_Key
       - aws configure set default.region us-west-2
       - terraform init
-      - terraform workspace select dev
+      - terraform workspace select $CF_BRANCH_TAG_NORMALIZED-$CF_PULL_REQUEST_NUMBER
       - terraform workspace list
       - terraform show
       #- terraform destroy --auto-approve
