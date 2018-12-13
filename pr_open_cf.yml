@@ -34,10 +34,6 @@ steps:
       - terraform plan
       #- terraform apply --auto-approve
       #- terraform show
-      #- terraform destroy --auto-approve
-      #- terraform workspace select default
-      #- terraform workspace delete dev
-      #- terraform workspace list
-      #- terraform show
+    
       
       
