@@ -5,7 +5,7 @@ steps:
     type: build
     image_name: infrastructure-private/Dockerfile
   SeeEnv:
-    title: See env vars
+    title: Show env vars
     image: ${{BuildingDockerImage}}
     commands:
       - env
