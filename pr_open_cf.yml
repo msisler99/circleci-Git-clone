@@ -1,19 +1,26 @@
 version: '1.0'
 steps:
+  GitCloneInfraPriv:
+    type: git-clone
+    title: Cloning Infrastructure Private repo
+    description: Cloning docker file
+    working_directory: ${{main_clone}}
+    git: CF-default
+    repo: https://github.com/ca-mmis/infrastructure-private.git
   BuildingDockerImage:
     title: Building Docker Image
     type: build
     dockerfile: ca-mmis/infrastructure-private/Dockerfile
     image_name: Dockerfile
   SeeEnv:
-    title: Show env vars
+    title: Show Env Variables
     image: ${{BuildingDockerImage}}
     commands:
       - env
       - ls -la  
   GitClone:
     type: git-clone
-    title: Cloning services repo
+    title: Cloning Services Repo
     description: Step description
     working_directory: ${{main_clone}}
     git: CF-default
