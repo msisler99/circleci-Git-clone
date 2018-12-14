@@ -2,7 +2,7 @@ version: '1.0'
 steps:
   GitCloneInfraPriv:
     type: git-clone
-    title: Cloning Infrastructure Private repo
+    title: Cloning Infrastructure Private Repo
     description: Cloning Dockerfile
     working_directory: ${{main_clone}}
     git: CF-default
