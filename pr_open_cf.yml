@@ -3,7 +3,7 @@ steps:
   BuildingDockerImage:
     title: Building Docker Image
     type: build
-    dockerfile: infrastructure-private/Dockerfile
+    dockerfile: ca-mmis/infrastructure-private.git/Dockerfile
     image_name: Dockerfile
   SeeEnv:
     title: Show env vars
