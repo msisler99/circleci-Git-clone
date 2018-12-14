@@ -1,22 +1,11 @@
 version: '1.0'
 steps:
-  GitCloneInfraPriv:
-    type: git-clone
-    title: Cloning Infrastructure Private Repo
-    description: Cloning Dockerfile
-    working_directory: ${{main_clone}}
-    git: CF-default
-    repo: https://github.com/ca-mmis/infrastructure-private.git
-    credentials:
-      username: ${{GITHUB_USERNAME}}
-      password: ${{GITHUB_PASSWORD}}
   BuildingDockerImage:
     title: Building Docker Image
     type: build
-    dockerfile: ca-mmis/infrastructure-private/Dockerfile
-    image_name: Dockerfile
+    image_name: infrastructure-private/Dockerfile
   SeeEnv:
-    title: Show Env Variables
+    title: See env vars
     image: ${{BuildingDockerImage}}
     commands:
       - env
