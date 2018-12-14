@@ -3,7 +3,7 @@ steps:
   GitCloneInfraPriv:
     type: git-clone
     title: Cloning Infrastructure Private repo
-    description: Cloning docker file
+    description: Cloning Dockerfile
     working_directory: ${{main_clone}}
     git: CF-default
     repo: https://github.com/ca-mmis/infrastructure-private.git
