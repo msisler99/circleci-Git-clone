@@ -10,9 +10,9 @@ Specific Github actions will trigger a Codefresh project to perform defined acti
 
 
 ## Codefresh pipelines 
-- The **pr_open** pipeline will create a new Terraform workspace with a supporting terraform state file in an AWS S3 bucket and will create all the AWS resources associated with the pull request.
+- The **pr_open** pipeline will create a new Terraform workspace with a supporting Terraform state file in an AWS S3 bucket and will create all the AWS resources associated with the pull request.
 - The **pr_synchronize** pipeline will use the workspace and state file created in the pr_open step above and modify AWS resources asccording to the updated Github resources.
-- The **pr_close** pipeline will remove all AWS resources createdin by the pr_open pipeline and will also remove the Terraform statefile created by the pr_open pipeline.
+- The **pr_close** pipeline will remove all AWS resources created by the pr_open pipeline, remove the Terraform statefile created by the pr_open pipeline and remove the Terraform workspace created by the pr_open pipeline.
 
 ## Sample Dockerfiles used in this POC
 The sample dockerfile used in this POC is a copy from the CA-MMIS/infrastructure/private reposityory.  The CA-MMIS/infrastructure/private dockerfile will be used in the "real" implementation of this code when it is included in the CA-MMIS/infrastructure/private repository after additional enhancements are completed.
